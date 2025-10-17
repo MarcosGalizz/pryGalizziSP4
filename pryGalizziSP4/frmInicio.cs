@@ -29,5 +29,26 @@ namespace pryGalizziSP4
             ClaseConexion claseConexion = new ClaseConexion();
             claseConexion.cargarChartKm(chtCamiones);
         }
+
+        private void btnGastosCamion_Click(object sender, EventArgs e)
+        {
+            chtCamiones.Series.Clear();
+            ClaseConexion claseConexion = new ClaseConexion();
+            claseConexion.cargarChartGasto(chtCamiones);
+        }
+
+        private void btnKgCamion_Click(object sender, EventArgs e)
+        {
+            chtCamiones.Series.Clear();
+            ClaseConexion claseConexion = new ClaseConexion();
+            claseConexion.cargarChartKm(chtCamiones);
+        }
+
+        private void btnGasViaCamion_Click(object sender, EventArgs e)
+        {
+            chtCamiones.Series.Clear();
+            ClaseConexion claseConexion = new ClaseConexion();
+            claseConexion.cargarChartViaticos(chtCamiones);
+        }
     }
 }

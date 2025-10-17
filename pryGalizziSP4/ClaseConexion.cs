@@ -82,18 +82,72 @@ namespace pryGalizziSP4
             {
                 chtCamiones.Series.Add("Camiones");
                 chtCamiones.ChartAreas[0].AxisX.Title = "Camiones";
-                chtCamiones.ChartAreas[0].AxisY.Title = "Gastos";
+                chtCamiones.ChartAreas[0].AxisY.Title = "Litros";
                 coneccionBaseDatos = new OleDbConnection(cadenaConexion);
                 coneccionBaseDatos.Open();
                 comandoBaseDatos = new OleDbCommand();
                 comandoBaseDatos.Connection = coneccionBaseDatos;
-                comandoBaseDatos.CommandText = "SELECT Camión, Kilómetros FROM TablaCamiones";
+                comandoBaseDatos.CommandText = "SELECT Camión, Litros FROM TablaCamiones";
                 lectorDataReader = comandoBaseDatos.ExecuteReader();
                 while (lectorDataReader.Read())
                 {
                     string camion = lectorDataReader[0].ToString();
-                    Int32 kilometros = Convert.ToInt32(lectorDataReader[1]);
-                    int index = chtCamiones.Series[0].Points.AddY(kilometros);
+                    Int32 litros = Convert.ToInt32(lectorDataReader[1]);
+                    int index = chtCamiones.Series[0].Points.AddY(litros);
+                    chtCamiones.Series[0].Points[index].AxisLabel = camion;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("No se pudieron obtener los datos solicitados.");
+            }
+        }
+
+        public void cargarChartKg(Chart chtCamiones)
+        {
+            try
+            {
+                chtCamiones.Series.Add("Camiones");
+                chtCamiones.ChartAreas[0].AxisX.Title = "Camiones";
+                chtCamiones.ChartAreas[0].AxisY.Title = "Kilogramos";
+                coneccionBaseDatos = new OleDbConnection(cadenaConexion);
+                coneccionBaseDatos.Open();
+                comandoBaseDatos = new OleDbCommand();
+                comandoBaseDatos.Connection = coneccionBaseDatos;
+                comandoBaseDatos.CommandText = "SELECT Camión, kg FROM TablaCamiones";
+                lectorDataReader = comandoBaseDatos.ExecuteReader();
+                while (lectorDataReader.Read())
+                {
+                    string camion = lectorDataReader[0].ToString();
+                    Int32 kg = Convert.ToInt32(lectorDataReader[1]);
+                    int index = chtCamiones.Series[0].Points.AddY(kg);
+                    chtCamiones.Series[0].Points[index].AxisLabel = camion;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("No se pudieron obtener los datos solicitados.");
+            }
+        }
+
+        public void cargarChartViaticos(Chart chtCamiones)
+        {
+            try
+            {
+                chtCamiones.Series.Add("Camiones");
+                chtCamiones.ChartAreas[0].AxisX.Title = "Camiones";
+                chtCamiones.ChartAreas[0].AxisY.Title = "Viáticos";
+                coneccionBaseDatos = new OleDbConnection(cadenaConexion);
+                coneccionBaseDatos.Open();
+                comandoBaseDatos = new OleDbCommand();
+                comandoBaseDatos.Connection = coneccionBaseDatos;
+                comandoBaseDatos.CommandText = "SELECT Camión, kg FROM TablaCamiones";
+                lectorDataReader = comandoBaseDatos.ExecuteReader();
+                while (lectorDataReader.Read())
+                {
+                    string camion = lectorDataReader[0].ToString();
+                    Int32 viatico = Convert.ToInt32(lectorDataReader[1]);
+                    int index = chtCamiones.Series[0].Points.AddY(viatico);
                     chtCamiones.Series[0].Points[index].AxisLabel = camion;
                 }
             }

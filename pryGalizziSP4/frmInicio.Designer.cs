@@ -106,6 +106,7 @@
             this.btnGastosCamion.TabIndex = 5;
             this.btnGastosCamion.Text = "Gastos por Camión";
             this.btnGastosCamion.UseVisualStyleBackColor = true;
+            this.btnGastosCamion.Click += new System.EventHandler(this.btnGastosCamion_Click);
             // 
             // btnKgCamion
             // 
@@ -115,6 +116,7 @@
             this.btnKgCamion.TabIndex = 6;
             this.btnKgCamion.Text = "Kilogramos por Camión";
             this.btnKgCamion.UseVisualStyleBackColor = true;
+            this.btnKgCamion.Click += new System.EventHandler(this.btnKgCamion_Click);
             // 
             // btnGasViaCamion
             // 
@@ -124,6 +126,7 @@
             this.btnGasViaCamion.TabIndex = 7;
             this.btnGasViaCamion.Text = "Gastos/Viaticos por Camión";
             this.btnGasViaCamion.UseVisualStyleBackColor = true;
+            this.btnGasViaCamion.Click += new System.EventHandler(this.btnGasViaCamion_Click);
             // 
             // frmInicio
             // 
