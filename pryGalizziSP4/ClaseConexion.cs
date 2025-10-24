@@ -38,7 +38,7 @@ namespace pryGalizziSP4
                 coneccionBaseDatos.Open();
 
                 label.Text = "Conectado a la Base de Datos";
-                label.BackColor = System.Drawing.Color.Green;
+                label.BackColor = System.Drawing.Color.LightGreen;
             }
             catch (Exception error)
             {
