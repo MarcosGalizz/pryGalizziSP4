@@ -41,7 +41,7 @@ namespace pryGalizziSP4
         {
             chtCamiones.Series.Clear();
             ClaseConexion claseConexion = new ClaseConexion();
-            claseConexion.cargarChartKm(chtCamiones);
+            claseConexion.cargarChartKg(chtCamiones);
         }
 
         private void btnGasViaCamion_Click(object sender, EventArgs e)

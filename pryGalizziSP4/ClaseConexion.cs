@@ -56,6 +56,8 @@ namespace pryGalizziSP4
                 chtCamiones.Series.Add("Camiones");
                 chtCamiones.ChartAreas[0].AxisX.Title = "Camiones";
                 chtCamiones.ChartAreas[0].AxisY.Title = "Kilometros";
+                chtCamiones.ChartAreas[0].AxisY.Maximum = 6000;
+                chtCamiones.ChartAreas[0].AxisY.Interval = 500;
                 coneccionBaseDatos = new OleDbConnection(cadenaConexion);
                 coneccionBaseDatos.Open();
                 comandoBaseDatos = new OleDbCommand();
@@ -83,6 +85,8 @@ namespace pryGalizziSP4
                 chtCamiones.Series.Add("Camiones");
                 chtCamiones.ChartAreas[0].AxisX.Title = "Camiones";
                 chtCamiones.ChartAreas[0].AxisY.Title = "Litros";
+                chtCamiones.ChartAreas[0].AxisY.Maximum = 500;
+                chtCamiones.ChartAreas[0].AxisY.Interval = 50;
                 coneccionBaseDatos = new OleDbConnection(cadenaConexion);
                 coneccionBaseDatos.Open();
                 comandoBaseDatos = new OleDbCommand();
@@ -110,6 +114,8 @@ namespace pryGalizziSP4
                 chtCamiones.Series.Add("Camiones");
                 chtCamiones.ChartAreas[0].AxisX.Title = "Camiones";
                 chtCamiones.ChartAreas[0].AxisY.Title = "Kilogramos";
+                chtCamiones.ChartAreas[0].AxisY.Maximum = 80000;
+                chtCamiones.ChartAreas[0].AxisY.Interval = 5000;
                 coneccionBaseDatos = new OleDbConnection(cadenaConexion);
                 coneccionBaseDatos.Open();
                 comandoBaseDatos = new OleDbCommand();
@@ -137,11 +143,13 @@ namespace pryGalizziSP4
                 chtCamiones.Series.Add("Camiones");
                 chtCamiones.ChartAreas[0].AxisX.Title = "Camiones";
                 chtCamiones.ChartAreas[0].AxisY.Title = "Viáticos";
+                chtCamiones.ChartAreas[0].AxisY.Maximum = 600;
+                chtCamiones.ChartAreas[0].AxisY.Interval = 100;
                 coneccionBaseDatos = new OleDbConnection(cadenaConexion);
                 coneccionBaseDatos.Open();
                 comandoBaseDatos = new OleDbCommand();
                 comandoBaseDatos.Connection = coneccionBaseDatos;
-                comandoBaseDatos.CommandText = "SELECT Camión, kg FROM TablaCamiones";
+                comandoBaseDatos.CommandText = "SELECT Camión, Viáticos FROM TablaCamiones";
                 lectorDataReader = comandoBaseDatos.ExecuteReader();
                 while (lectorDataReader.Read())
                 {
