@@ -49,11 +49,13 @@ namespace pryGalizziSP4
 
         }
 
-        public void cargarChartKm(Chart chtCamiones)
+        public void cargarChartKm(Chart chtCamiones, Int32 ind)
         {
             try
             {
+                chtCamiones.Invalidate();
                 chtCamiones.Series.Add("Camiones");
+                cambiarTipoGrafico(ind, chtCamiones);
                 chtCamiones.ChartAreas[0].AxisX.Title = "Camiones";
                 chtCamiones.ChartAreas[0].AxisY.Title = "Kilometros";
                 chtCamiones.ChartAreas[0].AxisY.Maximum = 6000;
@@ -78,11 +80,13 @@ namespace pryGalizziSP4
             }
         }
 
-        public void cargarChartGasto(Chart chtCamiones)
+        public void cargarChartGasto(Chart chtCamiones, Int32 ind)
         {
             try
             {
+                chtCamiones.Invalidate();
                 chtCamiones.Series.Add("Camiones");
+                cambiarTipoGrafico(ind, chtCamiones);
                 chtCamiones.ChartAreas[0].AxisX.Title = "Camiones";
                 chtCamiones.ChartAreas[0].AxisY.Title = "Litros";
                 chtCamiones.ChartAreas[0].AxisY.Maximum = 500;
@@ -107,11 +111,13 @@ namespace pryGalizziSP4
             }
         }
 
-        public void cargarChartKg(Chart chtCamiones)
+        public void cargarChartKg(Chart chtCamiones, Int32 ind)
         {
             try
             {
+                chtCamiones.Invalidate();
                 chtCamiones.Series.Add("Camiones");
+                cambiarTipoGrafico(ind, chtCamiones);
                 chtCamiones.ChartAreas[0].AxisX.Title = "Camiones";
                 chtCamiones.ChartAreas[0].AxisY.Title = "Kilogramos";
                 chtCamiones.ChartAreas[0].AxisY.Maximum = 80000;
@@ -136,11 +142,13 @@ namespace pryGalizziSP4
             }
         }
 
-        public void cargarChartViaticos(Chart chtCamiones)
+        public void cargarChartViaticos(Chart chtCamiones, Int32 ind)
         {
             try
             {
+                chtCamiones.Invalidate();
                 chtCamiones.Series.Add("Camiones");
+                cambiarTipoGrafico(ind, chtCamiones);
                 chtCamiones.ChartAreas[0].AxisX.Title = "Camiones";
                 chtCamiones.ChartAreas[0].AxisY.Title = "Viáticos";
                 chtCamiones.ChartAreas[0].AxisY.Maximum = 600;
@@ -162,6 +170,25 @@ namespace pryGalizziSP4
             catch
             {
                 MessageBox.Show("No se pudieron obtener los datos solicitados.");
+            }
+        }
+
+        private void cambiarTipoGrafico(Int32 index, Chart chtCamiones)
+        {
+            switch (index)
+            {
+                case 0:
+                    chtCamiones.Series[0].ChartType = SeriesChartType.Column;
+                    break;
+                case 1:
+                    chtCamiones.Series[0].ChartType = SeriesChartType.Line;
+                    break;
+                case 2:
+                    chtCamiones.Series[0].ChartType = SeriesChartType.Bar;
+                    break;
+                case 3:
+                    chtCamiones.Series[0].ChartType = SeriesChartType.Bubble;
+                    break;
             }
         }
     }

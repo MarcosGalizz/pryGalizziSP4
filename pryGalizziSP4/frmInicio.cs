@@ -15,6 +15,7 @@ namespace pryGalizziSP4
         public frmInicio()
         {
             InitializeComponent();
+            cboTipoChart.SelectedIndex = 0;
         }
 
         private void frmInicio_Load(object sender, EventArgs e)
@@ -27,28 +28,32 @@ namespace pryGalizziSP4
         {
             chtCamiones.Series.Clear();
             ClaseConexion claseConexion = new ClaseConexion();
-            claseConexion.cargarChartKm(chtCamiones);
+            claseConexion.cargarChartKm(chtCamiones, cboTipoChart.SelectedIndex);
         }
 
         private void btnGastosCamion_Click(object sender, EventArgs e)
         {
             chtCamiones.Series.Clear();
             ClaseConexion claseConexion = new ClaseConexion();
-            claseConexion.cargarChartGasto(chtCamiones);
+            claseConexion.cargarChartGasto(chtCamiones, cboTipoChart.SelectedIndex);
         }
 
         private void btnKgCamion_Click(object sender, EventArgs e)
         {
             chtCamiones.Series.Clear();
             ClaseConexion claseConexion = new ClaseConexion();
-            claseConexion.cargarChartKg(chtCamiones);
+            claseConexion.cargarChartKg(chtCamiones, cboTipoChart.SelectedIndex);
         }
 
         private void btnGasViaCamion_Click(object sender, EventArgs e)
         {
             chtCamiones.Series.Clear();
             ClaseConexion claseConexion = new ClaseConexion();
-            claseConexion.cargarChartViaticos(chtCamiones);
+            claseConexion.cargarChartViaticos(chtCamiones, cboTipoChart.SelectedIndex);
+        }
+
+        private void cboTipoChart_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
