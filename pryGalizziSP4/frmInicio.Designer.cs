@@ -52,10 +52,9 @@
             chartArea1.AxisX.Title = "Camiones";
             chartArea1.Name = "ChartArea1";
             this.chtCamiones.ChartAreas.Add(chartArea1);
-            this.chtCamiones.Location = new System.Drawing.Point(267, 38);
-            this.chtCamiones.Margin = new System.Windows.Forms.Padding(4);
+            this.chtCamiones.Location = new System.Drawing.Point(200, 31);
             this.chtCamiones.Name = "chtCamiones";
-            this.chtCamiones.Size = new System.Drawing.Size(824, 435);
+            this.chtCamiones.Size = new System.Drawing.Size(618, 353);
             this.chtCamiones.TabIndex = 0;
             // 
             // statusStripConexion
@@ -63,26 +62,24 @@
             this.statusStripConexion.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStripConexion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelConexion});
-            this.statusStripConexion.Location = new System.Drawing.Point(0, 506);
+            this.statusStripConexion.Location = new System.Drawing.Point(0, 410);
             this.statusStripConexion.Name = "statusStripConexion";
-            this.statusStripConexion.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStripConexion.Size = new System.Drawing.Size(1139, 26);
+            this.statusStripConexion.Size = new System.Drawing.Size(854, 22);
             this.statusStripConexion.TabIndex = 1;
             this.statusStripConexion.Text = "statusStripConexion";
             // 
             // toolStripStatusLabelConexion
             // 
             this.toolStripStatusLabelConexion.Name = "toolStripStatusLabelConexion";
-            this.toolStripStatusLabelConexion.Size = new System.Drawing.Size(15, 20);
+            this.toolStripStatusLabelConexion.Size = new System.Drawing.Size(12, 17);
             this.toolStripStatusLabelConexion.Text = "-";
             // 
             // btnKmCamion
             // 
             this.btnKmCamion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKmCamion.Location = new System.Drawing.Point(19, 27);
-            this.btnKmCamion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKmCamion.Location = new System.Drawing.Point(14, 22);
             this.btnKmCamion.Name = "btnKmCamion";
-            this.btnKmCamion.Size = new System.Drawing.Size(180, 55);
+            this.btnKmCamion.Size = new System.Drawing.Size(135, 45);
             this.btnKmCamion.TabIndex = 4;
             this.btnKmCamion.Text = "Kilometros por Camión";
             this.btnKmCamion.UseVisualStyleBackColor = true;
@@ -91,10 +88,9 @@
             // btnGastosCamion
             // 
             this.btnGastosCamion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGastosCamion.Location = new System.Drawing.Point(19, 106);
-            this.btnGastosCamion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGastosCamion.Location = new System.Drawing.Point(14, 86);
             this.btnGastosCamion.Name = "btnGastosCamion";
-            this.btnGastosCamion.Size = new System.Drawing.Size(180, 55);
+            this.btnGastosCamion.Size = new System.Drawing.Size(135, 45);
             this.btnGastosCamion.TabIndex = 5;
             this.btnGastosCamion.Text = "Gastos por Camión";
             this.btnGastosCamion.UseVisualStyleBackColor = true;
@@ -103,10 +99,9 @@
             // btnKgCamion
             // 
             this.btnKgCamion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKgCamion.Location = new System.Drawing.Point(19, 194);
-            this.btnKgCamion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKgCamion.Location = new System.Drawing.Point(14, 158);
             this.btnKgCamion.Name = "btnKgCamion";
-            this.btnKgCamion.Size = new System.Drawing.Size(180, 55);
+            this.btnKgCamion.Size = new System.Drawing.Size(135, 45);
             this.btnKgCamion.TabIndex = 6;
             this.btnKgCamion.Text = "Kilogramos por Camión";
             this.btnKgCamion.UseVisualStyleBackColor = true;
@@ -115,10 +110,9 @@
             // btnGasViaCamion
             // 
             this.btnGasViaCamion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGasViaCamion.Location = new System.Drawing.Point(19, 276);
-            this.btnGasViaCamion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGasViaCamion.Location = new System.Drawing.Point(14, 224);
             this.btnGasViaCamion.Name = "btnGasViaCamion";
-            this.btnGasViaCamion.Size = new System.Drawing.Size(180, 55);
+            this.btnGasViaCamion.Size = new System.Drawing.Size(135, 45);
             this.btnGasViaCamion.TabIndex = 7;
             this.btnGasViaCamion.Text = "Gastos/Viaticos por Camión";
             this.btnGasViaCamion.UseVisualStyleBackColor = true;
@@ -131,23 +125,24 @@
             this.panel1.Controls.Add(this.btnGasViaCamion);
             this.panel1.Controls.Add(this.btnGastosCamion);
             this.panel1.Controls.Add(this.btnKgCamion);
-            this.panel1.Location = new System.Drawing.Point(13, 104);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(10, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(224, 369);
+            this.panel1.Size = new System.Drawing.Size(168, 300);
             this.panel1.TabIndex = 8;
             // 
             // cboTipoChart
             // 
+            this.cboTipoChart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoChart.FormattingEnabled = true;
             this.cboTipoChart.Items.AddRange(new object[] {
             "Columna",
             "Línea",
             "Barra",
             "Burbuja"});
-            this.cboTipoChart.Location = new System.Drawing.Point(13, 63);
+            this.cboTipoChart.Location = new System.Drawing.Point(10, 51);
+            this.cboTipoChart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboTipoChart.Name = "cboTipoChart";
-            this.cboTipoChart.Size = new System.Drawing.Size(224, 24);
+            this.cboTipoChart.Size = new System.Drawing.Size(169, 21);
             this.cboTipoChart.TabIndex = 9;
             this.cboTipoChart.SelectedIndexChanged += new System.EventHandler(this.cboTipoChart_SelectedIndexChanged);
             // 
@@ -155,18 +150,19 @@
             // 
             this.lblTipoChart.AutoSize = true;
             this.lblTipoChart.BackColor = System.Drawing.Color.White;
-            this.lblTipoChart.Location = new System.Drawing.Point(13, 41);
+            this.lblTipoChart.Location = new System.Drawing.Point(10, 33);
+            this.lblTipoChart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTipoChart.Name = "lblTipoChart";
-            this.lblTipoChart.Size = new System.Drawing.Size(103, 16);
+            this.lblTipoChart.Size = new System.Drawing.Size(83, 13);
             this.lblTipoChart.TabIndex = 10;
             this.lblTipoChart.Text = "Tipo de Gráfico:";
             // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(57)))), ((int)(((byte)(108)))));
-            this.ClientSize = new System.Drawing.Size(1139, 532);
+            this.ClientSize = new System.Drawing.Size(854, 432);
             this.Controls.Add(this.lblTipoChart);
             this.Controls.Add(this.cboTipoChart);
             this.Controls.Add(this.panel1);
@@ -174,7 +170,6 @@
             this.Controls.Add(this.chtCamiones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadística de Consumo/Kilogramos/Gastos Por Camión";
